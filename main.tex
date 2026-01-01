@@ -1,0 +1,170 @@
+\documentclass[9pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[left=0.4in,top=0.4in,right=0.4in,bottom=0.4in]{geometry}
+\usepackage[T1]{fontenc}
+
+% --- Europass Typography ---
+\usepackage{helvet} 
+\renewcommand{\familydefault}{\sfdefault} % Official Europass sans-serif font
+
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{paracol} 
+\usepackage[hidelinks]{hyperref}
+
+
+% --- FIX: Same line start position ---
+\setlength{\parindent}{0pt}
+
+% --- Europass Official Colors ---
+\definecolor{europassblue}{RGB}{0, 102, 153}
+\definecolor{graytext}{RGB}{102, 102, 102}
+
+\pagestyle{empty}
+
+% --- Styling ---
+\titleformat{\section}{\large\bfseries\color{europassblue}\uppercase}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{6pt}
+
+\setlist[itemize]{leftmargin=12pt, noitemsep, topsep=2pt, parsep=1pt}
+
+\begin{document}
+
+% --- Header ---
+\begin{center}
+    {\Huge \textbf{\color{europassblue} Junaid Rahman Mokit}} \\
+    \vspace{5pt}
+    \small \color{graytext} Kishoregonj, Dhaka, Bangladesh \quad | \quad 
+    \textbf{\color{black}Email:} \href{mailto:jrmokit03@gmail.com}{jrmokit03@gmail.com} \\
+    \small
+    \textbf{\color{black}LinkedIn:} \href{https://www.linkedin.com/in/junaid-mokit}{\(\rightarrow\)} \quad | \quad
+    \textbf{\color{black}GitHub:} \href{https://github.com/JunaidMokit}{\(\rightarrow\)} \quad | \quad
+    \textbf{\color{black}Phone:} +8801743403774
+\end{center}
+
+\vspace{5pt}
+
+% Professional Divider Line
+\columnseprule=0.4pt
+\def\columnseprulecolor{\color{europassblue}}
+\columnsep=35pt
+
+\begin{paracol}{2}
+
+% --- LEFT COLUMN ---
+\section{Education}
+
+\textit{Bachelor of Science in Computer Science and Engineering (B.Sc. in CSE)} \hfill \textbf{2025} \\
+\textbf{United International University} \\
+CGPA: \textbf{3.19/4.00} \\
+Average Marks: \textbf{80.6\%}
+
+\vspace{8pt}
+
+\textit{Higher Secondary Certificate (HSC), Science} \hfill \textbf{2021} \\
+\textbf{Wali Newaz Khan College} \\
+GPA: \textbf{4.50/5.00} \\
+Average Marks: \textbf{75\%}
+
+\section{Technical Skills}
+\textbf{Languages:} C++, Java, JavaScript, Python \\
+\textbf{Machine Learning:} Pytorch, Pandas \\
+\textbf{Frameworks:} Django, React Native, React JS, Node.js, Express.js \\
+\textbf{Database:} MySQL, PostgreSQL, MongoDB, Firebase \\
+\textbf{Tools:} Git, Github, Postman
+
+\section{Awards \& Honors}
+\textbf{1st Runner Up} \\ System Analysis and Design Lab at UIU Project Show
+
+\vspace{4pt}
+\textbf{2nd Runner Up} \\ Final Year Design Project I at UIU Project Show
+
+\vspace{4pt}
+\textbf{50\% Scholarship} \\ Academic Excellence Award (Fall 2024)
+
+\vspace{4pt}
+\textbf{Rising Star} \\ UIU Computer Club (Fall 2022)
+
+\section{Leadership \& Experience}
+\textbf{UIU Computer Club} \\
+\textit{Media and Communication Executive} \\
+\textit{Oct, 2022 -- Oct, 2023}
+\begin{itemize}
+    \item Handled club communications and digital media presence.
+\end{itemize}
+
+\vspace{8pt}
+\textbf{UIU Communication Society} \\
+\textit{HR Executive} \\
+\textit{June, 2022 -- Sep, 2023}
+\begin{itemize}
+    \item Managed human resource activities and member coordination.
+\end{itemize}
+
+\section{Hobbies}
+Learning new things, exploring new devices, and playing football.
+
+\section{Languages}
+\textbf{Bengali:} Native \\
+\textbf{English:} Fluent
+
+% --- RIGHT COLUMN ---
+\switchcolumn
+
+\section{Research \& Publications}
+\textbf{1. Plant Disease Recognition from the Perspective of Bangladesh: A Comparative Study} \\
+\textit{\small Md Musfiqur Rahman, Md Mahbubur Rahman Tusher, Susmita Roy Rinky, \textbf{Junaid Rahman Mokit}, Sudipa Biswas}
+\begin{itemize}
+    \item Used Several Types of models to enhance accuracy.
+    \item Implementation of ensemble models.
+\end{itemize}
+
+\vspace{8pt}
+\textbf{2. Smart E-Waste Recycling Using AI and Blockchain: Enabling Sustainable Resource Recovery} \\
+\textit{\small Al Imran, Md Koushik Ahmed, Mahin Mahmud, \textbf{Junaid Rahman Mokit}, Redwan Utsab, Md Motaharul Islam}
+\begin{itemize}
+    \item Include waste management by AI blockchain.
+    \item Used several datasets and performed data cleaning.
+    \item Enhance accuracy.
+\end{itemize}
+
+\vspace{8pt}
+\textbf{3. A Reproducible Benchmark for Prompt Injection Vulnerability Assessment in SLMs} \\
+\textit{\small Md Musfiqur Rahman, Afsana Mimi Eti,\textbf{Junaid Rahman Mokit}, Sadia Afrin Mou, Soumitro Sarker, Mir Mohammad Shibly}
+\begin{itemize}
+    \item Explain vulnerability of LLM.
+    \item Focus on reducing vulnerability and enhancing accuracy.
+\end{itemize}
+
+\section{Projects}
+\textbf{SMARTUIU - University Management System} \\
+\textit{Role: Software \& DB Engineer} \\
+\textit{Tools: React JS, Python, Django, MySQL, Git, Github}
+\begin{itemize}
+    \item Developed system for student, faculty, and admin.
+    \item Implemented role-based access control and optimized database schemas.
+    \item \textbf{Achieved 30\% reduction} in query time through indexing.
+\end{itemize}
+
+\vspace{10pt}
+\textbf{UIU JOB BANK} \\
+\textit{Role: Software \& DB Engineer} \\
+\textit{Tools: React JS, Python, Django, MySQL, REST API, Git, Github}
+\begin{itemize}
+    \item Built job portal for internship and full-time opportunities.
+    \item Integrated REST APIs for search and application.
+    \item Designed interactive dashboard for employers and seekers.
+\end{itemize}
+
+\vspace{10pt}
+\textbf{Rescue Robot} \\
+\textit{Tools: C++, Arduino, Ultrasonic Sensor, Camera Module, Wi-Fi Module, REST API} \\
+\textit{Role: Software \& Hardware Integration}
+\begin{itemize}
+    \item Developed a system to detect human presence in disaster-affected buildings and transmit real-time signals.
+    \item Integrated a camera module to capture and send situational images using a REST API.
+\end{itemize}
+
+\end{paracol}
+\end{document}
