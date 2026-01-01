@@ -126,10 +126,10 @@
                     </span>
                     <h1 class="text-5xl md:text-7xl font-bold font-heading mb-6 leading-tight">
                         Junaid Rahman <br>
-                        <span class="gradient-text">Mokit</span>
+                        <span class="gradient-text glitch" data-text="Mokit">Mokit</span>
                     </h1>
-                    <h2 class="text-xl md:text-2xl text-gray-400 mb-8 font-light">
-                        Software & Database Engineer
+                    <h2 class="text-xl md:text-2xl text-gray-400 mb-8 font-light flex justify-center md:justify-start">
+                        <span class="typing">Software & Database Engineer</span>
                     </h2>
                     <p class="text-gray-400 max-w-lg mx-auto md:mx-0 mb-10 leading-relaxed">
                         Passionate about building scalable systems and intelligent solutions.
@@ -169,7 +169,7 @@
                         class="absolute inset-0 bg-gradient-to-tr from-cyan-500 to-blue-600 rounded-full blur-2xl opacity-20 animate-pulse">
                     </div>
                     <div
-                        class="relative w-full h-full rounded-full overflow-hidden border-4 border-slate-800/50 shadow-2xl">
+                        class="relative w-full h-full rounded-full overflow-hidden border-4 border-slate-800/50 shadow-2xl neon-border">
                         <!-- Placeholder if image fails, or use actual image -->
                         <img src="profile_ju.png" alt="Junaid Rahman Mokit"
                             class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700">
@@ -211,6 +211,23 @@
             <i class="fas fa-chevron-down text-2xl"></i>
         </a>
     </section>
+
+    <!-- Particle Container -->
+    <div id="particles" class="particle-container"></div>
+    <script>
+        // Generate Particles
+        const particleContainer = document.getElementById('particles');
+        const particleCount = 20;
+
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            particle.style.animationDelay = (Math.random() * 5) + 's';
+            particleContainer.appendChild(particle);
+        }
+    </script>
 
     <!-- About Section -->
     <section id="about" class="py-20 relative bg-dark/50">

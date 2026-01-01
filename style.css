@@ -43,11 +43,25 @@ body {
     }
 }
 
-.delay-100 { animation-delay: 0.1s; }
-.delay-200 { animation-delay: 0.2s; }
-.delay-300 { animation-delay: 0.3s; }
-.delay-400 { animation-delay: 0.4s; }
-.delay-500 { animation-delay: 0.5s; }
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+.delay-500 {
+    animation-delay: 0.5s;
+}
 
 /* Morphing Blob Background */
 .blob {
@@ -59,8 +73,13 @@ body {
 }
 
 @keyframes move {
-    from { transform: translate(0, 0) scale(1); }
-    to { transform: translate(20px, -20px) scale(1.1); }
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        transform: translate(20px, -20px) scale(1.1);
+    }
 }
 
 .glass-card {
@@ -70,9 +89,206 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.gradient-text {
-    background: linear-gradient(135deg, #22d3ee 0%, #3b82f6 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+/* Extreme Animations */
+
+/* Glitch Effect */
+.glitch {
+    position: relative;
+    color: white;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0f172a;
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -1px 0 #00ffff;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -1px 0 #ff00ff;
+    clip: rect(44px, 450px, 56px, 0);
+    animation: glitch-anim2 5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(30px, 9999px, 10px, 0);
+    }
+
+    5% {
+        clip: rect(80px, 9999px, 90px, 0);
+    }
+
+    10% {
+        clip: rect(30px, 9999px, 10px, 0);
+    }
+
+    15% {
+        clip: rect(60px, 9999px, 20px, 0);
+    }
+
+    20% {
+        clip: rect(10px, 9999px, 80px, 0);
+    }
+
+    100% {
+        clip: rect(30px, 9999px, 10px, 0);
+    }
+}
+
+@keyframes glitch-anim2 {
+    0% {
+        clip: rect(10px, 9999px, 80px, 0);
+    }
+
+    5% {
+        clip: rect(30px, 9999px, 10px, 0);
+    }
+
+    10% {
+        clip: rect(80px, 9999px, 90px, 0);
+    }
+
+    15% {
+        clip: rect(20px, 9999px, 60px, 0);
+    }
+
+    20% {
+        clip: rect(60px, 9999px, 10px, 0);
+    }
+
+    100% {
+        clip: rect(10px, 9999px, 80px, 0);
+    }
+}
+
+/* Typing Effect */
+.typing {
+    border-right: 2px solid #22d3ee;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    max-width: fit-content;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #22d3ee;
+    }
+}
+
+/* Neon Pulse */
+.neon-border {
+    box-shadow: 0 0 5px #22d3ee, 0 0 10px #22d3ee, 0 0 20px #22d3ee;
+    animation: neon-pulse 1.5s infinite alternate;
+}
+
+@keyframes neon-pulse {
+    from {
+        box-shadow: 0 0 5px #22d3ee, 0 0 10px #22d3ee, 0 0 20px #22d3ee;
+    }
+
+    to {
+        box-shadow: 0 0 10px #22d3ee, 0 0 20px #22d3ee, 0 0 40px #22d3ee;
+    }
+}
+
+/* Enhanced Glass Card Hover */
+.glass-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glass-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(30, 41, 59, 0.6);
+    border-color: rgba(34, 211, 238, 0.3);
+    box-shadow: 0 10px 30px -10px rgba(34, 211, 238, 0.3);
+}
+
+/* Floating Particles */
+.particle-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #22d3ee;
+    border-radius: 50%;
+    animation: particle-float 20s infinite linear;
+    opacity: 0.3;
+}
+
+@keyframes particle-float {
+    0% {
+        transform: translateY(100vh) translateX(0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-100px) translateX(100px);
+        opacity: 0;
+    }
+}
+
+/* Enhanced Blob Movement */
+@keyframes move-extreme {
+    0% {
+        transform: translate(0, 0) scale(1) rotate(0deg);
+    }
+
+    33% {
+        transform: translate(30px, -50px) scale(1.2) rotate(120deg);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.8) rotate(240deg);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1) rotate(360deg);
+    }
+}
+
+.blob {
+    animation: move-extreme 15s infinite ease-in-out;
 }
